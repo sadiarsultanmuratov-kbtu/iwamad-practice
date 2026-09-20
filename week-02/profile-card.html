@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card — Sultanmuratov Shadiyar</title>
+    <link rel="stylesheet" href="profile-card.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>My Main Page</h1>
+        <p>Aspiring Web Developer</p>
+    </header>
+
+    <main class="page-main">
+
+        <section class="card">
+
+            <img src="shadiyar.jpg" alt="Shadiyar" class="avatar">
+
+            <div class="card_body">
+
+                <h2 class="card_name">Sultanmuratov Shadiyar</h2>
+
+                <p class="card_bio">
+                    Third year IT Management student at KBTU. Learning to build web and mobile applications in HTML and CSS
+                </p>
+
+                <ul class="card_links">
+                    <li><a href="mailto:sadiarsultanmuratov@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/sadiarsultanmuratov-kbtu">GitHub</a></li>
+                </ul>
+
+                <button id="likeBtn" class="like-btn">❤️ Like</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-10 text-gray-500 text-sm">
+    <p>&copy; 2026 Sultanmuratov Shadiyar</p>
+    </footer>
+
+    <script>
+
+        const btn = document.querySelector('#likeBtn');
+        let liked = false;
+
+        btn.addEventListener('click', () => {
+            liked = !liked;
+
+            if (liked) {
+                btn.textContent = '💖 Liked!';
+                btn.classList.add('is-liked');
+            } else {
+                btn.textContent = '❤️ Like';
+                btn.classList.remove('is-liked');
+            }
+        });
+
+    </script>
+
+
+</body>
+</html>
