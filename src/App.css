@@ -1,0 +1,189 @@
+/* ============================================================
+   BASE
+   ============================================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, Arial, sans-serif;
+    background: #f4f4f8;
+    color: #222;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tagline {
+    margin: 4px 0 0 0;
+    color: #666;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+.page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.card {
+    background: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding: 24px;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card-name {
+    margin: 8px 0 4px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-role {
+    margin: 0 0 8px 0;
+    color: #666;
+}
+
+.card-bio {
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.card-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    display: flex;
+    gap: 16px;
+}
+
+.card-links a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.card-links a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   LIKE BUTTON
+   ============================================================ */
+.like-btn {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e5e7eb;
+    color: #222;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s ease;
+}
+
+.like-btn.is-liked {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skills-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.skills-section h3 {
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+.skills-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.skill {
+    background: #f4f4f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.empty {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 500px) {
+    .card {
+        text-align: center;
+    }
+
+    .card-links {
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
