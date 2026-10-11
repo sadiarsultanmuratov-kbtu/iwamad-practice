@@ -1,15 +1,29 @@
-type HeaderProps = {
-    name: string;
-    tagline: string;
-};
+import { NavLink } from 'react-router'
+import logo from '../assets/logo.svg'
+import { useLikes } from '../context/LikesContext'
 
-function Header({ name, tagline }: HeaderProps) {
-    return (
-        <header className="site-header">
-            <h1>{name}</h1>
-            <p className="tagline">{tagline}</p>
-        </header>
-    );
+type HeaderProps = {
+    name: string
 }
 
-export default Header;
+function Header({ name }: HeaderProps) {
+    const { likes } = useLikes()
+
+    return (
+        <header className="site-header">
+            <div className="brand">
+                <img src={logo} alt="" width={32} height={32} />
+                <span>{name}</span>
+            </div>
+
+            <nav aria-label="Main">
+                <NavLink to="/" end>Home</NavLink>
+                <NavLink to="/skills">Skills</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+                <span>♥ {likes}</span>
+            </nav>
+        </header>
+    )
+}
+
+export default Header

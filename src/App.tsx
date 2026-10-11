@@ -1,41 +1,21 @@
-import Header from './components/Header';
-import ProfileCard from './components/ProfileCard';
-import Footer from './components/Footer';
-import { type Skill } from './components/SkillBadge';
-import './App.css';
-
-const skills: Skill[] = [
-    { id: 1, label: 'English' },
-    { id: 2, label: 'French' },
-    { id: 3, label: 'Python' },
-    { id: 4, label: 'SQL' },
-    { id: 5, label: 'Power BI' },
-    { id: 6, label: 'Figma' },
-];
+import { Routes, Route } from 'react-router'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import SkillsPage from './pages/SkillsPage'
+import ContactPage from './pages/ContactPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
     return (
-        <>
-            <Header
-                name="Sultanmuratov Shadiyar"
-                tagline="Aspiring Web Developer"
-            />
-
-            <main className="page-main">
-                <ProfileCard
-                    name="Sultanmuratov Shadiyar"
-                    role="IT Management Student"
-                    bio="Third-year IT Management student at KBTU. Learning to build web and mobile applications."
-                    avatarUrl="/shadiyar.jpg"
-                    email="sadiarsultanmuratov@gmail.com"
-                    github="https://github.com/sadiarsultanmuratov-kbtu"
-                    skills={skills}
-                />
-            </main>
-
-            <Footer author="Sultanmuratov Shadiyar" year={2026} />
-        </>
-    );
+        <Routes>
+            <Route element={<Layout />}>
+                <Route index element={<HomePage />} />
+                <Route path="skills" element={<SkillsPage />} />
+                <Route path="contact" element={<ContactPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Route>
+        </Routes>
+    )
 }
 
-export default App;
+export default App
