@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import LikeButton from './LikeButton';
 import SkillBadge, { type Skill } from './SkillBadge';
 
 type ProfileCardProps = {
@@ -20,8 +20,6 @@ function ProfileCard({
     github,
     skills,
 }: ProfileCardProps) {
-    const [liked, setLiked] = useState(false);
-
     return (
         <section className="card">
             {avatarUrl && (
@@ -38,12 +36,7 @@ function ProfileCard({
                     <li><a href={github}>GitHub</a></li>
                 </ul>
 
-                <button
-                    className={`like-btn ${liked ? 'is-liked' : ''}`}
-                    onClick={() => setLiked(!liked)}
-                >
-                    {liked ? '💖 Liked!' : '❤️ Like'}
-                </button>
+                <LikeButton />
 
                 <div className="skills-section">
                     <h3>Skills</h3>
