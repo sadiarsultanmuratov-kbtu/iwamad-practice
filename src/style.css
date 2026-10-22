@@ -1,0 +1,23 @@
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 24px;
+    font-family: system-ui, sans-serif;
+}
+
+.like-btn {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #e5e7eb;
+    color: #222;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.15s ease;
+}
+
+.like-btn.is-liked {
+    background: #ef4444;
+    color: #ffffff;
+}
