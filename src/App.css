@@ -187,3 +187,30 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ============================================================
+   NAVIGATION (Week 4)
+   ============================================================ */
+.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.site-nav a {
+    color: #2563eb;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.site-nav a.active {
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.header-likes {
+    font-weight: 600;
+}
