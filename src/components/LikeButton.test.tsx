@@ -1,7 +1,6 @@
 import { it, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import '@testing-library/jest-dom/vitest'
 import LikeButton from './LikeButton'
 import { LikesProvider } from '../context/LikesContext'
 
