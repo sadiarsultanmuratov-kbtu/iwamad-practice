@@ -1,0 +1,95 @@
+/* Design-system components: only var(--…), no hex colours */
+
+.btn {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-primary);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.tag {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Header: mobile first — stacked on a phone, one row from 640px */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.site-header nav a {
+  color: var(--color-text);
+}
+
+.site-header nav a.active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Week 6: form */
+.form { display: grid; gap: var(--space-4); max-width: 360px; }
+.field { display: grid; gap: var(--space-2); }
+.field input:not([type='checkbox']) { box-sizing: border-box; width: 100%; font: inherit; min-height: 44px;
+  padding: var(--space-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+.field input[aria-invalid='true'] { border: 2px solid var(--color-error); }
+.field-error { margin: 0; color: var(--color-error); font-size: 0.875rem; }
+.check { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; }
